@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
-//import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs/Observable';
+import {HttpClient} from'@angular/common/http';
 import{
 	Conversao,
 	ConversaoResponse
@@ -12,7 +13,7 @@ import{
 export class ConversorService {
 
 	private readonly BASE_URL = "http:// api.fixer.io/latest";
-  constructor() { }
+  constructor(private http: HttpClient) { }
   /**
    * Realiza a chamada para a API de conversão de moedas.
    *
