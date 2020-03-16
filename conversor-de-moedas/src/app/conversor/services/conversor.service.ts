@@ -20,7 +20,7 @@ export class ConversorService {
    * @param Conversao conversao
    * @return Observable<ConversaoResponse>
    */
-  converter(conversao: Conversao): Observable<ConversaoResponse> {
+  converter(conversao: Conversao): Observable<any> {
   	let params = `?base=${conversao.moedaDe}&symbols=${conversao.moedaPara}`;
 
   	return this.http
