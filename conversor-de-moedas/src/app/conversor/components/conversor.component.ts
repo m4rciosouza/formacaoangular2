@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm} from '@angular/forms';
 import { Moeda, Conversao, ConversaoResponse} from '../models';
-import { MoedaService, conversorService} from '../services';
+import { MoedaService, ConversorService} from '../services';
 
 @Component({
   selector: 'app-conversor',
@@ -18,7 +18,7 @@ export class ConversorComponent implements OnInit {
 	@ViewChild("conversaoForm") conversaoForm: NgForm;
 
   constructor(
-  	private MoedaService: MoedaService,
+  	private moedaService: MoedaService,
   	private conversorService: ConversorService) { }
 
   ngOnInit(): void {
